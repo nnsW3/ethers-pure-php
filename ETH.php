@@ -111,7 +111,7 @@ class BigNumber
     /**#@+
      * Array constants
      *
-     * Rather than create a thousands and thousands of new BigInteger objects in repeated function calls to add() and
+     * Rather than create thousands and thousands of new BigInteger objects in repeated function calls to add() and
      * multiply() or whatever, we'll just work directly on arrays, taking them in as parameters and returning them.
      *
      * @access private
@@ -473,7 +473,7 @@ class BigNumber
                         break;
                     case self::MODE_BCMATH:
                         // explicitly casting $x to a string is necessary, here, since doing $x[0] on -1 yields different
-                        // results then doing it on '-1' does (modInverse does $x[0])
+                        // results than doing it on '-1' does (modInverse does $x[0])
                         $this->value = $x === '-' ? '0' : (string) $x;
                         break;
                     default:
